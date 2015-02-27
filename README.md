@@ -1,5 +1,5 @@
 # TypeScript Type Generator
-TypeScript type generator is a simple library that generates TypeScript interfaces, classes and enums based on .NET types. It does support generics, inheritance, and also it could handle string/number based dictionaries as maps.
+TypeScript type generator is a simple library that generates TypeScript interfaces, classes and enums based on .NET types. It does support generics, inheritance, nullable value types and also it could handle string/number based dictionaries as associative arrays.
 
 The binaries are available through the nuget feed - [TypeScript.NET](http://www.nuget.org/packages/TypeScript.NET/ "TypeScript.NET").
 
