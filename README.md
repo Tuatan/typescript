@@ -5,7 +5,7 @@ The binaries are available through the nuget feed - [TypeScript.NET](http://www.
 
 ## Usage scenario
 
-The main usage scenario is to mirror to TypeScript world data objects defined on the .NET server side, this is why the generator does not handle any methods/properties with a body. Although it supports auto-properties and sets default values for primitive types such as number, boolean, string and enums.
+The main usage scenario is to mirror to TypeScript world data objects defined on the .NET server side, this is why the generator does not handle any methods/properties with a body. Although it supports auto-properties and sets default values for primitive types such as number, boolean, string or enum.
 
 For example, based on the following C# type declaration:
 ```csharp
@@ -43,11 +43,11 @@ the generator produces the following TypeScript definition:
 
 ## Usage
 
-There are currently two aprroaches to generate TypeScript files:
-- Imperatively, using *TypeScriptGenerator* class 
-- Using MsBuild task
+Currently there are two approaches to generate TypeScript files:
+- Directly using *TypeScriptGenerator* class 
+- Using MsBuild target
 
-In both cases you need to pass to generator entity information about the source types to be used, destination location for TypeScript code and custom configuration if you need to customize generation logic.
+In both cases you need to pass entity information about the source types to be used, destination location for TypeScript code and custom configuration if you need to customize generation logic.
 
 ### Generate from code
 
@@ -65,7 +65,7 @@ You could generate TypeScript definition based on specific types:
     	typeof(MyEnum));
 ``` 
 
-...based on all types from specific assembly:
+...based on all types from a specific assembly:
 
 ```csharp
 
@@ -95,6 +95,6 @@ You might want to use this version if you would want to produce new versions of 
 
 This is the full list of parameters you could configure:
 
-* **UseAssociativeArray** - Whatever use or not special logic to create an associated array interface for IDictionary<string, T>/IDictionary<*number type*, T> types.
+* **UseAssociativeArray** - Indicates whether to use a special logic to create an associated array interface for IDictionary<string, T>/IDictionary<*number type*, T> types.
 * **StringMapInterfaceName** - Fullname of TypeScript interface for string based generic associate array.
 * **NumberMapInterfaceName** - Fullname of TypeScript interface for number based generic associate array.
