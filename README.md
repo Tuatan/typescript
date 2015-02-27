@@ -9,7 +9,7 @@ The main usage scenario is to mirror to TypeScript world data objects defined on
 
 For example, based on the following C# type declaration:
 ```csharp
-  public class DerivedClass<T1, T2> : BaseClass, IGenericInterface<int, T1>, 	ISimpleInterface 
+  public class DerivedClass<T1, T2> : BaseClass, IGenericInterface<int, T1>, ISimpleInterface 
   {
     public IDictionary<int, T1> Map { get; set; }
     
@@ -47,7 +47,7 @@ There are currently two aprroaches to generate TypeScript files:
 - Imperatively, using *TypeScriptGenerator* class 
 - Using MsBuild task
 
-In both cases you need to pass to generator entity information about the source types to be used, destination location for TypeScript code and overrides for default configuration.
+In both cases you need to pass to generator entity information about the source types to be used, destination location for TypeScript code and custom configuration if you need to customize generation logic.
 
 ### Generate from code
 
