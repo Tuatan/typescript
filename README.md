@@ -95,6 +95,6 @@ You might want to use this version if you would want to produce new versions of 
 
 This is the full list of parameters you could configure:
 
-* **UseAssociativeArray** - Indicates whether to use a special logic to create an associated array interface for IDictionary<string, T>/IDictionary<*number type*, T> types.
+* **UseAssociativeArray** - Indicates whether to use a special logic to create an associated array interface for IDictionary<*string*, T> or IDictionary<*number type*, T> types.
 * **StringMapInterfaceName** - Fullname of TypeScript interface for string based generic associate array.
 * **NumberMapInterfaceName** - Fullname of TypeScript interface for number based generic associate array.
